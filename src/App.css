@@ -3,7 +3,7 @@
 :root {
   --primary-white: #fff;
   --primary-yellow:#FFC300;
-  --primary-dark: rgba(255,255, 255, 0);
+  --primary-dark: #010101;
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
   --primary-black: #000000;
@@ -22,7 +22,7 @@ body{
 }
 /********************************* NAV LINKS ***********************************/
 .navbar {
-  background-color: var(--dark-gray) !important;
+  background-color: var(--primary-dark) !important;
 }
 
 nav {
@@ -132,24 +132,28 @@ nav ul li{
   color: var(--primary-white);
   transition: .2s ease-in-out;
 }
-/*********************************** PARTICLES JS ******************************************************/
 
-.tsparticles-canvas-el{
-  position: absolute;
-  hight: 100vh;
-  width: 100vw;
-  z-index: 1;
-}
-@media(max-width: 768px) {
-.particles-canvas{
-  display: none;
-}
-}
 
 /*********************************** ABOUT ME **************************************************/
+.photo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile-img {
   width: 16rem;
   border-radius: 50%;
   padding: 0.3rem;
   border: 1px solid var(--primary-yellow);
+}
+.about-heading {
+color: var(--primary-yellow);
+  text-transform: uppercase;
+}
+
+@media(max-width: 468px) {
+  .profile-img {
+    width: 10rem;
+  }
 }
